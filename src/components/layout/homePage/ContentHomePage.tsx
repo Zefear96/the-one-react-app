@@ -6,9 +6,10 @@ import LongRightArrow from "../../../assets/images/long-right-arrow.png";
 import Shield from "../../../assets/features/shield.png";
 import Bitcoin from "../../../assets/features/Bitcoin.png";
 import "../../../App.css";
-import { Button, Card, Col, Row } from "antd";
+import {  Card, Col, Row } from "antd";
 import "./contents.css";
 import OpenAccountButton from "../../dataEntry/openAccountButton/OpenAccountButton";
+import ServicesTabs from "./ServicesTabs";
 
 
 export default function ContentHomePage() {
@@ -163,6 +164,8 @@ export default function ContentHomePage() {
                     </div>
                 </div>
             </section>
+
+            <ServicesTabs/>
 
         </Content >
     )
