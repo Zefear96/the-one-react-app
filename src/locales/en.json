@@ -1,0 +1,70 @@
+{
+  "login": {
+    "title": "Login to your account",
+    "subtitle": "Welcome to The One",
+    "email_label": "Email",
+    "password_label": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "action": "Log In",
+    "no_account": "Don't have an account?",
+    "register": "Register"
+  },
+  "register": {
+    "title": "Sign Up",
+    "subtitle": "Create an account to access The One",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "password_label": "Password",
+    "confirm_label": "Confirm Password",
+    "terms_agree": "I agree to the",
+    "terms_link": "Terms of Service",
+    "privacy_link": "Privacy Policy",
+    "action": "Register",
+    "have_account": "Already have an account?",
+    "login": "Log In"
+  },
+  "verify": {
+  "title": "Verify the code",
+  "subtitle": "We sent a verification code to your email",
+  "code_label": "Verification Code",
+  "action": "Verify",
+  "not_received": "Didn't receive the code?",
+  "resend": "Resend"
+},
+"2fa": {
+  "title": "Two-Factor Authentication",
+  "subtitle": "Enter the code from your authenticator app",
+  "code_label": "Authenticator Code",
+  "action": "Verify",
+  "cannot_access": "Can't access your app?",
+  "use_backup": "Use backup code"
+},
+"reset": {
+  "title": "Reset Password",
+  "subtitle": "Enter a new password for your account",
+  "new_label": "New Password",
+  "confirm_label": "Confirm Password",
+  "action": "Reset Password"
+},
+"reset_request": {
+  "title": "Account Recovery",
+  "subtitle": "Enter your email to receive a reset link",
+  "email_label": "Email",
+  "action": "Send Link",
+  "back": "Back to Login"
+},
+"backup": {
+  "title": "Backup Code",
+  "subtitle": "Enter one of the backup codes you saved earlier",
+  "code_label": "Backup Code",
+  "action": "Verify",
+  "back": "Back to 2FA"
+},
+"confirm": {
+  "title": "Email Sent",
+  "subtitle": "We have sent a confirmation link to your email. Please check your inbox and follow the link to proceed.",
+  "back_login": "Back to Login"
+}
+
+}
