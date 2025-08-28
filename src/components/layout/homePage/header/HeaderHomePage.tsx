@@ -1,10 +1,10 @@
 import { Header } from 'antd/es/layout/layout'
 import { Menu } from 'antd'
-import CtaButton from '../../dataEntry/ctaButton/CtaButton'
-import ButtonLang from '../../dataEntry/ButtonLang'
-import Logo from '../../../assets/images/logo_white.png'
-import './header.css';
-import "../../../App.css";
+import CtaButton from '../../../dataEntry/ctaButton/CtaButton'
+import ButtonLang from '../../../dataEntry/ButtonLang'
+import Logo from '../../../../assets/images/logo_white.png'
+import '././header.css';
+import "../../../../App.css";
 
 
 
@@ -53,7 +53,7 @@ export default function HeaderHomePage() {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1rem'
+                gap: '1rem',
             }}>
                 <ButtonLang />
                 <CtaButton text="Подать заявку"/>

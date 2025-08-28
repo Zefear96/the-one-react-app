@@ -17,7 +17,7 @@ const CtaButton: React.FC<CustomButtonProps> = ({ text }) => {
     }
 
     return (
-        <a className="cta-button" type="submit" href={text === "Подать заявку" ? "#contact" : "#"}
+        <a className="cta-button hidden md:inline-block" type="submit" href={text === "Подать заявку" ? "#contact" : "#"}
             onClick={handleClick}>{text}
         </a>
     )

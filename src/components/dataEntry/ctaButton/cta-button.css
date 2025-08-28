@@ -2,7 +2,7 @@
     position: relative;
     display: inline-block;
     padding: 12px 32px;
-    border-radius: 9999px;
+    border-radius: 1rem;
     font-weight: 600;
     font-size: 0.875rem;
     color: black;

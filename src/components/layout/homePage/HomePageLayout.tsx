@@ -1,5 +1,5 @@
 import { Layout, } from "antd";
-import HeaderHomePage from "./HeaderHomePage";
+import HeaderHomePage from "./header/HeaderHomePage";
 import ContentHomePage from "./ContentHomePage";
 
 

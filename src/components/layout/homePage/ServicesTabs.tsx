@@ -13,6 +13,7 @@ import Image14 from "../../../assets/images/image14.png";
 import Image15 from "../../../assets/images/image15.png";
 import Image16 from "../../../assets/images/image16.png";
 import Image17 from "../../../assets/images/image17.png";
+import LongRightArrow from "../../../assets/images/long-right-arrow.png";
 import CardFeatures from "./CardFeatures";
 
 
@@ -134,17 +135,42 @@ const forBusinessCard = [
 
 export default function ServicesSection() {
     return (
-        <section className="bg-[#191919] text-white px-6 md:px-10 py-16">
+        <section className="bg-[#191919] text-white px-6 md:px-10 py-16" style={{
+            padding: "0 2.5rem"
+        }}>
             <div className="max-w-screen-xl mx-auto">
-                <Tabs defaultActiveKey="1" centered size="large" tabBarStyle={{ borderBottom: "none" }}>
-                    <TabPane tab="для физических лиц" key="1">
+
+                <Tabs defaultActiveKey="1" centered size="large" tabBarStyle={{ borderBottom: "none" }} >
+                    <TabPane tab="для физических лиц" key="1" >
                         {/* Desktop */}
+                        <div className="flex justify-between items-center mb-6"
+                            style={{
+                                marginTop: "3rem",
+                                marginBottom: "1.5rem",
+                                display: "flex",
+                                alignItems: "center",
+                                color: "white",
+                                justifyContent: "space-between"
+
+                            }}>
+                            <h2 className="text-3xl md:text-4xl font-light">Кому подойдёт:</h2>
+                            <div style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "0.5rem"
+                            }}>
+                                <span>Вправо&nbsp;&nbsp;&nbsp;</span>
+                                <img alt="→" className="h-14 w-auto" draggable="false" src={LongRightArrow} />
+                            </div>
+                        </div>
                         <div className="hidden md:block">
                             <Carousel style={{
                                 display: "flex",
                                 gap: "2rem",
-                                alignItems: "stretch"
-                            }} dots>
+                                alignItems: "stretch",
+                                overflowX: "auto",
+                                cursor: "grab"
+                            }} dots adaptiveHeight draggable >
                                 {forIndividuals.map((item, idx) => (
                                     <CardServicesTabs key={idx} {...item} index={idx} mode="desktop" />
                                 ))}
@@ -185,7 +211,7 @@ export default function ServicesSection() {
                 ))}
               </Collapse>
             </div> */}
-                                    <section style={{
+                        <section style={{
                             paddingTop: "10rem",
                             paddingBottom: "5rem",
                             textAlign: "center"

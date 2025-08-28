@@ -1,0 +1,36 @@
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #191919;
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-track span {
+    font-size: 154px;
+    font-weight: 200;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    padding-right: 3rem;
+}
+
+@media (max-width: 767px) {
+    .marquee-track span {
+        font-size: 72px;
+        -webkit-text-stroke: 0.5px white;
+    }
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
