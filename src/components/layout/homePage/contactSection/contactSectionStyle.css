@@ -82,9 +82,10 @@
 
 .contact-submit {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 16px;
     flex-wrap: wrap;
+    margin-top: 32px;
 }
 
 .disclaimer {
@@ -99,6 +100,7 @@
     font-weight: bold;
     color: black;
     transition: background 0.3s ease;
+    margin-top: 0;
 }
 
 .contact-glow {
@@ -151,7 +153,8 @@
 
     .contact-submit {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        justify-content: start;
     }
 
     .contact-glow {

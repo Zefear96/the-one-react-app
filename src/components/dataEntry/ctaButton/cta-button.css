@@ -1,7 +1,8 @@
 .cta-button {
+    font-family: "Nagel", sans-serif !important;
     position: relative;
     display: inline-block;
-    padding: 12px 32px;
+    padding: 14px 32px;
     border-radius: 1rem;
     font-weight: 600;
     font-size: 0.875rem;

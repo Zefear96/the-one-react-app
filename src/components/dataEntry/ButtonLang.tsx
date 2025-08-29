@@ -1,29 +1,34 @@
-import { FlagOutlined, GlobalOutlined } from "@ant-design/icons";
-import { Select } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
-
-const OPTIONS = [
-    { value: "RU", label: <span><FlagOutlined style={{ marginRight: 6 }} /> RU</span> },
-    { value: "EN", label: <span><GlobalOutlined style={{ marginRight: 6 }} /> EN</span> },
-  ];
-
+import Russia from '../../assets/images/russia.png';
+import Usa from '../../assets/images/usa.png';
+import './langBtnStyle.css'
 
 export default function ButtonLang() {
-    const [selectedItems, setSelectedItems] = useState<string[]>(["RU"]);
+    const [open, setOpen] = useState(false);
 
-    const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o.value));
+    const toggleMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
+        setOpen((prev) => !prev);
+    };
+
+    const closeMenu = () => setOpen(false);
 
     return (
-        <Select
-            // mode="multiple"
-            placeholder="RU"
-            value={selectedItems}
-            onChange={setSelectedItems}
-            style={{
-                color: 'white',
-                background: 'none',
-            }}
-            options={filteredOptions}
-        />
+        <div className="language-switcher" onClick={closeMenu}>
+            <button onClick={toggleMenu} className="lang-button">
+                <img src={Russia} className="lang-flag" alt="RU" />
+                RU
+                <span className={`arrow ${open ? 'open' : ''}`}><DownOutlined /></span>
+            </button>
+
+            <ul className={`lang-menu ${open ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
+                <li>
+                    <a href="en.html" className="lang-item">
+                        <img src={Usa} className="lang-flag" alt="EN" /> EN
+                    </a>
+                </li>
+            </ul>
+        </div>
     )
 }

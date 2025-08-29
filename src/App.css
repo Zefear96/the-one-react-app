@@ -3,7 +3,12 @@
 }
 
 body{
-  font-family: "Nagel", sans-serif;
+  font-family: "Nagel", sans-serif !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: inherit;
+  margin: 0;
+  background-color: #191919;
 }
 
 .card-hover img {

@@ -1,0 +1,293 @@
+.hero-section {
+    position: relative;
+    padding: 80px 24px 80px;
+    min-height: 500px;
+    overflow-x: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-section {
+      padding-top: 96px;
+      min-height: 700px;
+    }
+  }
+  
+  .hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
+  .hero-left {
+    z-index: 10;
+  }
+  
+  .hero-text-block {
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    color: white;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 640px) {
+    .hero-title {
+      font-size: 40px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 60px;
+    }
+  }
+  
+  .gradient-title {
+    background: linear-gradient(to bottom, #00eefd, #32ffb1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-subtitle {
+    margin-top: 32px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .custom-cta-button {
+    width: 100%;
+    max-width: 280px;
+    margin-left: 0;
+    margin-right: auto;
+    height: 52px;
+  }
+  
+  .custom-cta-button:hover {
+    background: #00cbb4;
+  }
+  
+  .hero-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 64px;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-right {
+      margin-top: 0;
+      align-items: center;
+    }
+  }
+  
+  .hero-img-mobile {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -380px;
+    width: 110%;
+    object-fit: contain;
+    margin-right: -24px;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-img-mobile {
+      display: none;
+    }
+  }
+  
+  .hero-img-desktop {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-img-desktop {
+      display: block;
+      width: 500px;
+      object-fit: contain;
+      transform: scale(1.25);
+      transition: transform 0.5s ease;
+    }
+  }
+  
+
+  .custom-cta-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 64px;
+    width: 220px;
+    padding: 0 24px;
+    margin-top: 32px; /* теперь точно сработает */
+    border-radius: 9999px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.4s ease;
+  }
+  
+  .custom-cta-button-en {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 64px;
+    width: 240px;
+    padding: 0 24px;
+    margin-top: 32px; /* теперь точно сработает */
+    border-radius: 9999px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.4s ease;
+  }
+  
+  .custom-cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 64px;
+    background: linear-gradient(to bottom, #00eefd, #32ffb1);
+    border-radius: 9999px;
+    z-index: 1;
+    transition: width 0.4s ease;
+  }
+  
+  .custom-cta-button-en::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 64px;
+    background: linear-gradient(to bottom, #00eefd, #32ffb1);
+    border-radius: 9999px;
+    z-index: 1;
+    transition: width 0.4s ease;
+  }
+  
+  .custom-cta-button:hover::before {
+    width: 100%;
+  }
+  
+  .custom-cta-button-en:hover::before {
+    width: 100%;
+  }
+  
+  .custom-cta-button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-cta-button-en span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .custom-cta-button:hover span {
+    color: black;
+  }
+  
+  .custom-cta-button-en:hover span {
+    color: black;
+  }
+  
+  .custom-cta-button img {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-cta-button-en img {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-cta-button:hover img {
+    transform: translateX(4px);
+  }
+  
+  .custom-cta-button-en:hover img {
+    transform: translateX(4px);
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 480px) {
+    .custom-cta-button {
+      width: 180px !important;
+      height: 48px !important;
+      font-size: 0.95rem !important;
+      padding: 0 16px !important;
+      margin-top: 42px !important;
+      display: inline-flex !important;
+    }
+  
+    .custom-cta-button::before {
+      width: 48px;
+    }
+  
+    .custom-cta-button img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 480px) {
+    .custom-cta-button-en {
+      width: 200px !important;
+      height: 48px !important;
+      font-size: 0.95rem !important;
+      padding: 0 16px !important;
+      margin-top: 42px !important;
+      display: inline-flex !important;
+    }
+  
+    .custom-cta-button-en::before {
+      width: 48px;
+    }
+  
+    .custom-cta-button-en img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

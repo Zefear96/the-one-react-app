@@ -1,0 +1,88 @@
+#langMenu {
+    transform: rotateX(-90deg);
+    /* Изначально свернуто вверх */
+    transform-origin: top;
+    /* Точка поворота сверху */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#langMenu.open {
+    transform: rotateX(0deg);
+    /* Раскрыто */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .lang-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .lang-flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .arrow {
+    transition: transform 0.2s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .lang-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 4px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    min-width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0.95);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+    padding: 0;
+  }
+  
+  .lang-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scaleY(1);
+    padding: 0;
+  }
+  
+  .lang-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .lang-item:hover {
+    color: #00F0D4;
+  }
+  

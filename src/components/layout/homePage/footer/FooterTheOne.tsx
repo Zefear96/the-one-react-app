@@ -34,7 +34,7 @@ export default function FooterTheOne() {
                         </h3>
                         <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                             {[
-                                { label: "Главная", href: "index.html" },
+                                { label: "Главная", onClick: () => navigate('/')},
                                 {
                                     label: "Для физических лиц",
                                     href: "#tabs-section",
