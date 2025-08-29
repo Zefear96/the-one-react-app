@@ -1,13 +1,9 @@
-import { Card, Col, List, Row, Typography } from "antd";
+import { Card, Col, Row } from "antd";
 import TheOne from '../../../../assets/cards-logo/theone.png'
 import CardFly from '../../../../assets/cards-logo/cardfly.png'
 import Ofex from '../../../../assets/cards-logo/ofex.png'
 import Rectangle from '../../../../assets/cards-logo/rectangle.png'
-import Meta from "antd/es/card/Meta";
 import './flipCard.css'
-
-
-// const { Title, Paragraph } = Typography;
 
 export default function SystemInfoSection() {
     const cardsData = [
@@ -63,47 +59,18 @@ export default function SystemInfoSection() {
                     color: "black",
                     lineHeight: "1.625",
                     marginTop: "1rem",
-                    fontSize: "1.25rem"
+                    fontSize: "1.25rem",
+                    marginBottom: "3rem"
                 }}>
                     <p style={{
                         color: "black"
                     }}>
-                        <a href="#" className="font-light">Единый интерфейс</a> — бесконечные возможности.<br />Всё связано. Всё синхронизировано.<br />
-                        <a href="#" style={{ fontWeight: "700" }}>Всё — в одной экосистеме.</a>
+                        <a href="#" style={{ color: "black" }}>Единый интерфейс</a> — бесконечные возможности.<br />Всё связано. Всё синхронизировано.<br />
+                        <a href="#" style={{ fontWeight: "700", color: "black" }}>Всё — в одной экосистеме.</a>
                     </p>
                 </div>
             </div>
-            {/* <Row gutter={[24, 24]}>
-                {cardsData.map((card, index) => (
-                    <Col key={index} xs={24} sm={12} md={8}>
-                        <Card
-                            hoverable
-                            style={{
-                                borderRadius: "1rem",
-                                overflow: "hidden",
-                                height: "100%",
-                            }}
-                            cover={
-                                <img
-                                    src={card.logo}
-                                    alt={card.title}
-                                    style={{ height: 160, objectFit: "contain", padding: "1rem" }}
-                                />
-                            }
-                        >
-                            <Title level={4}>{card.title}</Title>
-                            <List
-                                dataSource={card.items}
-                                renderItem={(item) => (
-                                    <List.Item style={{ border: "none", padding: "0.25rem 0" }}>
-                                        <Paragraph style={{ margin: 0 }}>{item}</Paragraph>
-                                    </List.Item>
-                                )}
-                            />
-                        </Card>
-                    </Col>
-                ))}
-            </Row> */}
+
             <Row gutter={[24, 24]} style={{
                 minHeight: "500px"
             }}>
@@ -114,7 +81,13 @@ export default function SystemInfoSection() {
 
                                 {/* Front */}
                                 <Card
-                                    variant="borderless"
+                                    bodyStyle={{
+                                        backgroundColor: "white",
+                                        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                                        height: "400px",
+                                        padding: "1.5rem"
+                                    }}
+                                    variant="outlined"
                                     className="flip-card-front"
                                     hoverable
                                     cover={
@@ -126,7 +99,9 @@ export default function SystemInfoSection() {
                                                 display: "flex",
                                                 alignItems: "center",
                                                 padding: "0 1.5rem",
-                                                height: "5rem"
+                                                height: "5rem",
+                                                boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+
                                             }}>
                                             <img
                                                 src={card.logo}
@@ -136,27 +111,51 @@ export default function SystemInfoSection() {
                                         </div>
                                     }
                                 >
-                                    <Meta style={{ color: "black", fontSize: "1.5rem", lineHeight: "2rem", fontWeight: "500" }} title={card.title} />
+                                    <div style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        justifyContent: "space-between",
+                                        height: "calc(100% - 80px)"
+                                    }}>
+                                        <p style={{ color: "black", fontSize: "1.5rem", lineHeight: "2rem", fontWeight: "500" }}>
+                                            {card.title}</p>
+                                        <div style={{ display: "flex", justifyContent: "end" }}>
+                                            <div style={{
+                                                borderRadius: "50%",
+                                                backgroundColor: "#00F0D4",
+                                                height: "1.75rem",
+                                                width: "1.75rem",
+                                                display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                                color: "black"
+                                            }}>→</div>
+                                        </div>
+                                    </div>
                                 </Card>
 
                                 {/* Back */}
                                 <Card
-                                    style={{
+                                    bodyStyle={{
                                         backgroundColor: "black",
-                                        color: "white"
+                                        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                                        color: "white",
+                                        height: "400px",
                                     }}
+
                                     className="flip-card-back"
                                     hoverable
                                     cover={
                                         <div
                                             style={{
                                                 backgroundColor: "black",
-                                                borderTopRightRadius: "1rem",
-                                                borderTopLeftRadius: "1rem",
+                                                // borderTopRightRadius: "1rem",
+                                                // borderTopLeftRadius: "1rem",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 padding: "0 1.5rem",
-                                                height: "5rem"
+                                                height: "5rem",
+                                                boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
                                             }}>
                                             <img
                                                 src={card.logo}
@@ -178,7 +177,7 @@ export default function SystemInfoSection() {
                                                     src={Rectangle}
                                                     className="w-2.5 h-2.5 mt-1 object-contain"
                                                 />
-                                                <span>{text}</span>
+                                                <span> {text}</span>
                                             </p>
                                         ))}
                                     </div>

@@ -3,6 +3,7 @@ import ProtectedRoute from "./PotectedRoute";
 import PersonalPage from "../pages/PersonalPage";
 import HomePage from "../pages/HomePage";
 import ErrorPage from "../pages/ErrorPage";
+import ContactPage from "../pages/ContactPage";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
             }>
             </Route>
             <Route path="/" element={<HomePage />} />
+            <Route path="/contacts" element={<ContactPage/>} />
             <Route path="*" element={<ErrorPage/>} />
         </Routes>
     )

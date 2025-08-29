@@ -10,6 +10,8 @@ import StatisticSection from "./statisticSection/StatisticSection";
 import SystemInfoSection from "./systemSection/SystemInfoSection";
 import AboutUsSection from "./aboutUsSection/AboutUsSection";
 import CreateSystemSection from "./createSystemSection/CreateSystemSection";
+import ContactSection from "./contactSection/ContactSection";
+import PartnersSection from "./partnersSection/PartersSection";
 
 
 export default function ContentHomePage() {
@@ -24,6 +26,8 @@ export default function ContentHomePage() {
             <Marquee/>
             <StatisticSection/>
             <SystemInfoSection/>
+            <ContactSection/>
+            <PartnersSection/>
         </Content >
     )
 }

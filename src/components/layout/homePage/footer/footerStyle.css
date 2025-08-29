@@ -1,0 +1,11 @@
+.menuItem:hover {
+    color: #00F0D4;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #00eefd, #32ffb1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

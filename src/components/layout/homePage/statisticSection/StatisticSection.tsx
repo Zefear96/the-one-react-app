@@ -8,7 +8,12 @@ import TimelineSections from "../timeline/TimelineSections";
 
 
 const formatter: StatisticProps['formatter'] = (value) => (
-    <CountUp end={value as number} separator="." />
+    <CountUp
+        end={value as number} separator="."
+        decimals={Number.isInteger(value) ? 0 : 1} // ← количество знаков после запятой
+        // ← количество знаков после запятой
+        decimal="."  // ← символ разделителя (по умолчанию ".")
+    />
 );
 
 const { Paragraph } = Typography;
@@ -143,47 +148,47 @@ export default function StatisticSection() {
             }}>Единое и надёжное <br /> <span style={{ color: "#00F0D4" }}>финансовое решение</span></h2>
 
 
-                <Row
-                    // gutter={[32, 32]}
-                    justify="center"
-                    style={{
-                        gap: "1.5rem",
-                        marginBottom: "6rem"
-                    }}
-                >
-                    {itemsCard.map((item, index) => (
-                        <Col
-                            key={index}
-                            xs={24} // 1 колонка
-                            sm={12} // 2 колонки
-                            md={6}  // 3 колонки
-                            style={{
-                                padding: "1.5rem",
-                                backgroundColor: "white",
-                                borderRadius: "1.5rem",
-                                textAlign: "start",
-                            }}
-                        >
-                            <Title style={{
-                                fontSize: "1.5rem",
-                                marginBottom: "0.5rem",
-                                color: "black",
-                                lineHeight: "2rem",
-                                fontWeight: "500"
-                            }}>
-                                {item.title}
-                            </Title>
-                            <Paragraph style={{
-                                fontSize: "1.25rem",
-                                margin: 0,
-                                color: "black"
-                            }}>
-                                {item.desc}
-                            </Paragraph>
-                        </Col>
-                    ))}
-                </Row>
-            <TimelineSections/>
+            <Row
+                // gutter={[32, 32]}
+                justify="center"
+                style={{
+                    gap: "1.5rem",
+                    marginBottom: "6rem"
+                }}
+            >
+                {itemsCard.map((item, index) => (
+                    <Col
+                        key={index}
+                        xs={24} // 1 колонка
+                        sm={12} // 2 колонки
+                        md={6}  // 3 колонки
+                        style={{
+                            padding: "1.5rem",
+                            backgroundColor: "white",
+                            borderRadius: "1.5rem",
+                            textAlign: "start",
+                        }}
+                    >
+                        <Title style={{
+                            fontSize: "1.5rem",
+                            marginBottom: "0.5rem",
+                            color: "black",
+                            lineHeight: "2rem",
+                            fontWeight: "500"
+                        }}>
+                            {item.title}
+                        </Title>
+                        <Paragraph style={{
+                            fontSize: "1.25rem",
+                            margin: 0,
+                            color: "black"
+                        }}>
+                            {item.desc}
+                        </Paragraph>
+                    </Col>
+                ))}
+            </Row>
+            <TimelineSections />
         </section>
     )
 }

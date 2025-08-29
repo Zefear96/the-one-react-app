@@ -1,12 +1,11 @@
 import { Layout, } from "antd";
 import HeaderHomePage from "./header/HeaderHomePage";
 import ContentHomePage from "./ContentHomePage";
+import FooterTheOne from "./footer/FooterTheOne";
 
 
 
 export default function HomePageLayout() {
-
-    const { Footer } = Layout;
 
     // const items = [
     //     {
@@ -33,9 +32,7 @@ export default function HomePageLayout() {
         <Layout style={{background: '#191919'}}>
             <HeaderHomePage />
             <ContentHomePage/>
-            <Footer style={{ textAlign: 'center' }}>
-                Ant Design ©{new Date().getFullYear()} Created by Ant UED
-            </Footer>
+            <FooterTheOne/>
         </Layout>
     )
 }
